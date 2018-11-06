@@ -1,0 +1,8 @@
+/**
+ * Font
+ */
+
+@font-face {
+  font-family: "originalFont";
+  src: url($FONT_PATH + 'originalFont.woff') format('woff'), url($FONT_PATH + 'originalFont.ttf') format('truetype');
+}

@@ -1,0 +1,63 @@
+/*
+--- 
+name: Card
+category:
+  - component
+  - component/card
+--- 
+
+```html
+<div class="c-card">
+  <div class="c-card_image">
+    <img src="" alt="" width="120" height="120" style="background-color: #ccc">
+  </div>
+  <div class="c-card_body">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+  </div>
+</div>
+<div class="c-card">
+  <div class="c-card_image c-card_image-rev">
+    <img src="" alt="" width="120" height="120" style="background-color: #ccc">
+  </div>
+  <div class="c-card_body">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+  </div>
+</div>
+```
+*/
+.c-card {
+  background-color: #fcfcfc;
+}
+
+.c-card_image {
+
+  > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.c-card_content {
+  padding: 10px;
+}
+
+.c-card_title {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.c-card_text {
+  font-size: 14px;
+}
+
+.c-card_link {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 12px;
+
+  > a {
+    margin: 0 10px;
+  }
+}

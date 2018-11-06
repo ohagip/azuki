@@ -1,0 +1,31 @@
+<%_
+BUILD_ENV     = env;
+CONSTANT      = constants;
+//FILE_PATH   = filePath; // 相対パス
+//ASSETS_PATH   = FILE_PATH + 'assets/';
+FILE_PATH     = CONSTANT.contentsPath;
+ASSETS_PATH   = CONSTANT.assetsPath;
+IMAGES_PATH   = ASSETS_PATH + 'images/';
+CSS_PATH      = ASSETS_PATH + 'css/';
+JS_PATH       = ASSETS_PATH + 'js/';
+DUMMY_PATH    = CONSTANT.contentsPath + 'dummy/';
+DUMMY_IMAGES_PATH  = DUMMY_PATH + 'images/';
+
+// 全ページ共通
+site = {
+  title: 'title',
+  description: 'ddescription',
+  keywords: 'keywords',
+
+  ogpUrl: CONSTANT.url,
+  ogpTitle: 'title',
+  ogpDescription: 'description',
+  ogpImage: CONSTANT.url + 'assets/images/common/ogp.png',
+  ogpSiteName: 'site name',
+  ogpType: 'article',
+  ogpLocale: 'ja_JP',
+  ogpAppID: '',
+
+  gaID: CONSTANT.gaID
+};
+_%>

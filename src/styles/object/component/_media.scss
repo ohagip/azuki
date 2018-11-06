@@ -1,0 +1,50 @@
+/*
+--- 
+name: Media
+category:
+  - component
+  - component/media
+--- 
+
+```html
+<div class="c-media">
+  <div class="c-media_image">
+    <img src="" alt="" width="120" height="120" style="background-color: #ccc">
+  </div>
+  <div class="c-media_body">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+  </div>
+</div>
+<div class="c-media">
+  <div class="c-media_image c-media_image-rev">
+    <img src="" alt="" width="120" height="120" style="background-color: #ccc">
+  </div>
+  <div class="c-media_body">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+  </div>
+</div>
+```
+*/
+.c-media {
+  @include clearfix;
+  font-size: 14px;
+}
+
+.c-media_image {
+  float: left;
+  margin-right: 10px;
+
+  &-rev {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  > img {
+
+  }
+}
+
+.c-media_body {
+  overflow: hidden;
+}

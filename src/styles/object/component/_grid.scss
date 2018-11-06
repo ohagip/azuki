@@ -1,0 +1,73 @@
+/*
+--- 
+name: Grid
+category:
+  - component
+  - component/grid
+--- 
+
+- 12カラムをベースをしたグリッドシステム
+- 実際に利用するときは`div.col`は不要
+
+```html
+ <style>.col { background-color: #ccc; border: solid 1px #999; }</style>
+<div class="c-grid">
+  <div class="c-grid_item c-grid_item-1"><div class="col">1</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">2</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">3</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">4</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">5</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">6</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">7</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">8</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">9</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">10</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">11</div></div>
+  <div class="c-grid_item c-grid_item-1"><div class="col">12</div></div>
+</div>
+<div class="c-grid">
+  <div class="c-grid_item c-grid_item-4"><div class="col">1</div></div>
+  <div class="c-grid_item c-grid_item-4"><div class="col">2</div></div>
+  <div class="c-grid_item c-grid_item-4"><div class="col">3</div></div>
+</div>
+<div class="c-grid c-grid-gutter">
+  <div class="c-grid_item c-grid_item-3"><div class="col">1</div></div>
+  <div class="c-grid_item c-grid_item-3"><div class="col">2</div></div>
+  <div class="c-grid_item c-grid_item-3"><div class="col">3</div></div>
+  <div class="c-grid_item c-grid_item-3"><div class="col">4</div></div>
+</div>
+```
+*/
+.c-grid {
+  $name: #{&};
+  $unit: 12;
+  $gutter: 10px;
+
+  @include clearfix;
+  display: block;
+
+  width: 100%;
+
+  > .c-grid_item {
+    float: left;
+    display: block;
+    box-sizing: border-box;
+
+    @for $i from 1 through $unit {
+      &.c-grid_item-#{$i} {
+        width: percentage($i / $unit);
+      }
+    }
+  }
+
+  &.c-grid-gutter {
+    width: auto;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+
+    > .c-grid_item {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+  }
+}

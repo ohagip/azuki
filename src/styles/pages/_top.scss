@@ -1,0 +1,179 @@
+/**
+ * Top page
+ */
+
+.page-top {
+  $imgPath: $IMG_PATH + 'top/';
+
+  // --------------------
+  // Test
+  // --------------------
+  .test {
+    height: 50px;
+    @include mq-pc { content: 'pc'; }
+    @include mq-tab { content: 'tab'; }
+    @include mq-sp { content: 'sp'; }
+  }
+
+  .test-tab-gt {
+    height: 50px;
+    @include mq-tab-gt { content: 'tab-gt'; }
+  }
+
+  .test-tab-lt {
+    height: 50px;
+    @include mq-tab-lt { content: 'tab-lt'; }
+  }
+
+
+  // --------------------
+  // Hero
+  // --------------------
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding-top: floor(percentage(540px / 960px));
+    width: 100%;
+  }
+
+  .hero_cover {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+
+  .hero_viewport {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero_item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero_item > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero_pager {
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    font-size: 0;
+
+    @include mq-pc  {
+      padding-right: 20px;
+      text-align: right;
+    }
+    @include mq-tab-lt { text-align: center; }
+  }
+
+  .hero_icon {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 1;
+    transition: $HOVER_TRANSITION_OPACITY;
+
+    @include mq-tab-gt {
+      margin: 0 5px;
+      height: 45px;
+      width: 40px;
+    }
+
+    @include mq-sp {
+      margin: 0 (10px / 2);
+      height: (46px / 2);
+      width: (80px / 2);
+    }
+
+    &.is-active {
+      opacity: 1 !important;
+      cursor: default;
+    }
+    
+    &:hover {
+      opacity: $HOVER_OPACITY;
+    }
+    
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      display: block;
+      left: 0;
+      height: 1px;
+      background-color: #909090;
+
+      @include mq-tab-gt {
+        top: 22px;
+        width: 40px;
+      }
+
+      @include mq-sp {
+        top: (24px / 2);
+        width: (80px / 2);
+      }
+    }
+  }
+
+  .hero_bar {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    height: 1px;
+    background-color: #fff;
+
+    @include mq-tab-gt {
+      top: 22px;
+      width: 40px;
+    }
+
+    @include mq-sp {
+      top: (24px / 2);
+      width: (80px / 2);
+    }
+  }
+
+  // --------------------
+  // YouTube
+  // --------------------
+  .youtube {
+    margin: 0 auto;
+    max-width: 680px;
+  }
+
+  .youtube_inner {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; // YouTubeをレスポンシブ対応にする
+    width: 100%;
+  }
+
+  .youtube iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

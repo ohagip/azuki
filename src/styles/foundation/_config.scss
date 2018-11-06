@@ -1,0 +1,52 @@
+/**
+ * Config
+ */
+$ENV: env();
+//@if $ENV == 'dev' {}
+
+//$IMG_PATH: '../images/';
+//$FONT_PATH: '../font/';
+$IMG_PATH: constants('assetsPath') + 'images/';
+$FONT_PATH: constants('assetsPath') + 'font/';
+
+$BASE_COLOR: #fff;
+
+$CONTAINER_WIDTH-PC: 1024px;
+$CONTAINER_WIDTH-TAB: 768px;
+$CONTAINER_WIDTH-SP: (750px / 2);
+$CONTAINER_WIDTH-XSP: (640px / 2);
+
+$CONTAINER_PADDING-PC: 32px;
+$CONTAINER_PADDING-TAB: 30px;
+$CONTAINER_PADDING-SP: (40px / 2);
+$CONTAINER_PADDING-XSP: (40px / 2);
+
+$CONTAINER_WIDTH_IN-PC: ($CONTAINER_WIDTH-PC - $CONTAINER_PADDING-PC * 2);
+$CONTAINER_WIDTH_IN-TAB: ($CONTAINER_WIDTH-TAB - $CONTAINER_PADDING-TAB * 2);
+$CONTAINER_WIDTH_IN-SP: ($CONTAINER_WIDTH-SP - $CONTAINER_PADDING-SP * 2);
+$CONTAINER_WIDTH_IN-XSP: ($CONTAINER_WIDTH-XSP - $CONTAINER_PADDING-XSP * 2);
+
+$FONT_FAMILY: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+$FONT_FAMILY_MINCHO: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "メイリオ", Meiryo, serif;
+
+$FONT_SIZE: 16px;
+$LINE_HEIGHT: 1.6;
+
+$FONT_COLOR: #000;
+$LINK_COLOR: $FONT_COLOR;
+
+$MQ_BREAKPOINT_XSP_MAX: 374px;
+$MQ_BREAKPOINT_SP_MAX: breakpoint('SP', 'MAX') + px;
+$MQ_BREAKPOINT_TAB_MIN: breakpoint('TAB', 'MIN') + px;
+$MQ_BREAKPOINT_TAB_MAX: breakpoint('TAB', 'MAX') + px;
+$MQ_BREAKPOINT_PC_MIN: breakpoint('PC', 'MIN') + px;
+
+$HOVER_TRANSITION_DURATION: .2s;
+$HOVER_TRANSITION_OPACITY: opacity $HOVER_TRANSITION_DURATION ease;
+$HOVER_TRANSITION_COLOR: color $HOVER_TRANSITION_DURATION ease;
+$HOVER_TRANSITION_BG_COLOR: background-color $HOVER_TRANSITION_DURATION ease;
+$HOVER_TRANSITION_BORDER: border $HOVER_TRANSITION_DURATION ease;
+$LINE_TRANSITION: width .2s cubic-bezier(0,.65,.35,1);
+$HOVER_OPACITY: .7;
+
+//$IMAGE_UPDATE: '?u=20180101';

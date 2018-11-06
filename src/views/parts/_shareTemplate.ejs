@@ -1,0 +1,22 @@
+<%- include('../_config') _%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<meta property="og:url" content="<% if(page.ogpUrl) { %><%= page.ogpUrl %><% } else { %><%= site.ogpUrl %><% } %>">
+<meta property="og:title" content="<% if(page.ogpTitle) { %><%= page.ogpTitle %><% } else { %><%= site.ogpTitle %><% } %>">
+<meta property="og:description" content="<% if(page.ogpDescription) { %><%= page.ogpDescription %><% } else { %><%= site.ogpDescription %><% } %>">
+<meta property="og:image" content="<% if(page.ogpImage) { %><%= page.ogpImage %><% } else { %><%= site.ogpImage %><% } %>"><%# size(1200x630推奨) %>
+<meta property="og:site_name" content="<% if(page.ogpSiteName) { %><%= page.ogpSiteName %><% } else { %><%= site.ogpSiteName %><% } %>">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="<% if(page.ogpLocale) { %><%= page.ogpLocale %><% } else { %><%= site.ogpLocale %><% } %>">
+
+<script>
+  location.href = '../?id=<%= page.id %>';
+</script>
+</head>
+<body>
+</body>
+</html>

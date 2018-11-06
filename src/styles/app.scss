@@ -1,0 +1,68 @@
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
+@import 'foundation/_config';
+@import 'foundation/_mixin';
+@import 'foundation/_reset';
+@import 'foundation/_font';
+@import 'foundation/_base';
+@import 'foundation/_animation';
+
+// ==========================================================================
+// Libs （ライブラリはnpmかlibsフォルダからimportする）
+// ==========================================================================
+
+//@import "../../node_modules/slick-carousel/slick/slick";
+//@import 'libs/_slick';
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+@import 'layout/_wrap';
+@import 'layout/_footer';
+@import 'layout/_header';
+@import 'layout/_main';
+//@import 'layout/_sidebar';
+
+// ==========================================================================
+// Object
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+
+@import 'object/component/_container';
+@import 'object/component/_button';
+@import 'object/component/_grid';
+@import 'object/component/_media';
+@import 'object/component/_card';
+//@import 'object/component/_svgSprite';
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+
+@import 'object/project/_footer';
+@import 'object/project/_subNav';
+@import 'object/project/_header';
+@import 'object/project/_menu';
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+
+@import 'object/utility/_clearfix';
+@import 'object/utility/_margin';
+@import 'object/utility/_padding';
+@import 'object/utility/_only';
+
+// ==========================================================================
+// Page
+// ==========================================================================
+
+@import 'pages/_top';
+//@import 'pages/_about';
+

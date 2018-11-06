@@ -1,0 +1,12 @@
+/**
+ * Animation
+ */
+
+@keyframes btn-animation {
+  0%   { background-color: #e61a3b; }
+  20%  { background-color: #42c700; }
+  40%  { background-color: #2873e3; }
+  60%  { background-color: #c0be00; }
+  80%  { background-color: #e41a8d; }
+  100% { background-color: #e61a3b; }
+}

@@ -1,0 +1,111 @@
+/**
+ * Margin
+ */
+
+.u-mt-5  { margin-top:  5px !important; }
+.u-mt-10 { margin-top: 10px !important; }
+.u-mt-15 { margin-top: 15px !important; }
+.u-mt-20 { margin-top: 20px !important; }
+.u-mt-25 { margin-top: 25px !important; }
+.u-mt-30 { margin-top: 30px !important; }
+.u-mt-35 { margin-top: 35px !important; }
+.u-mt-40 { margin-top: 40px !important; }
+.u-mt-45 { margin-top: 45px !important; }
+.u-mt-50 { margin-top: 50px !important; }
+
+.u-mt-s {
+  @include mq-pc  { margin-top: 16px !important; }
+  @include mq-tab { margin-top: 12px !important; }
+  @include mq-sp  { margin-top:  8px !important; }
+}
+.u-mt-m {
+  @include mq-pc  { margin-top: 32px !important; }
+  @include mq-tab { margin-top: 24px !important; }
+  @include mq-sp  { margin-top: 16px !important; }
+}
+.u-mt-l {
+  @include mq-pc  { margin-top: 48px !important; }
+  @include mq-tab { margin-top: 36px !important; }
+  @include mq-sp  { margin-top: 24px !important; }
+}
+
+.u-mb-5  { margin-bottom:  5px !important; }
+.u-mb-10 { margin-bottom: 10px !important; }
+.u-mb-15 { margin-bottom: 15px !important; }
+.u-mb-20 { margin-bottom: 20px !important; }
+.u-mb-25 { margin-bottom: 25px !important; }
+.u-mb-30 { margin-bottom: 30px !important; }
+.u-mb-35 { margin-bottom: 35px !important; }
+.u-mb-40 { margin-bottom: 40px !important; }
+.u-mb-45 { margin-bottom: 45px !important; }
+.u-mb-50 { margin-bottom: 50px !important; }
+
+.u-mb-s {
+  @include mq-pc  { margin-bottom: 16px !important; }
+  @include mq-tab { margin-bottom: 12px !important; }
+  @include mq-sp  { margin-bottom:  8px !important; }
+}
+.u-mb-m {
+  @include mq-pc  { margin-bottom: 32px !important; }
+  @include mq-tab { margin-bottom: 24px !important; }
+  @include mq-sp  { margin-bottom: 16px !important; }
+}
+.u-mb-l {
+  @include mq-pc  { margin-bottom: 48px !important; }
+  @include mq-tab { margin-bottom: 36px !important; }
+  @include mq-sp  { margin-bottom: 24px !important; }
+}
+
+.u-ml-5  { margin-left:  5px !important; }
+.u-ml-10 { margin-left: 10px !important; }
+.u-ml-15 { margin-left: 15px !important; }
+.u-ml-20 { margin-left: 20px !important; }
+.u-ml-25 { margin-left: 25px !important; }
+.u-ml-30 { margin-left: 30px !important; }
+.u-ml-35 { margin-left: 35px !important; }
+.u-ml-40 { margin-left: 40px !important; }
+.u-ml-45 { margin-left: 45px !important; }
+.u-ml-50 { margin-left: 50px !important; }
+
+.u-ml-s {
+  @include mq-pc  { margin-left: 16px !important; }
+  @include mq-tab { margin-left: 12px !important; }
+  @include mq-sp  { margin-left:  8px !important; }
+}
+.u-ml-m {
+  @include mq-pc  { margin-left: 32px !important; }
+  @include mq-tab { margin-left: 24px !important; }
+  @include mq-sp  { margin-left: 16px !important; }
+}
+.u-ml-l {
+  @include mq-pc  { margin-left: 48px !important; }
+  @include mq-tab { margin-left: 36px !important; }
+  @include mq-sp  { margin-left: 24px !important; }
+}
+
+.u-mr-5  { margin-right:  5px !important; }
+.u-mr-10 { margin-right: 10px !important; }
+.u-mr-15 { margin-right: 15px !important; }
+.u-mr-20 { margin-right: 20px !important; }
+.u-mr-25 { margin-right: 25px !important; }
+.u-mr-30 { margin-right: 30px !important; }
+.u-mr-35 { margin-right: 35px !important; }
+.u-mr-40 { margin-right: 40px !important; }
+.u-mr-45 { margin-right: 45px !important; }
+.u-mr-50 { margin-right: 50px !important; }
+
+.u-mr-s {
+  @include mq-pc  { margin-right: 16px !important; }
+  @include mq-tab { margin-right: 12px !important; }
+  @include mq-sp  { margin-right:  8px !important; }
+}
+.u-mr-m {
+  @include mq-pc  { margin-right: 32px !important; }
+  @include mq-tab { margin-right: 24px !important; }
+  @include mq-sp  { margin-right: 16px !important; }
+}
+.u-mr-l {
+  @include mq-pc  { margin-right: 48px !important; }
+  @include mq-tab { margin-right: 36px !important; }
+  @include mq-sp  { margin-right: 24px !important; }
+}

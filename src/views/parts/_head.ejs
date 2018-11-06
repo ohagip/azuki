@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title><% if(page.title) { %><%- page.title %><% } else { %><%- site.title %><% } %></title>
+<meta name="description" content="<% if(page.description) { %><%- page.description %><% } else { %><%- site.description %><% } %>">
+<meta name="keywords" content="<% if(page.keywords) { %><%- page.keywords %><% } else { %><%- site.keywords %><% } %>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="<%- IMAGES_PATH %>common/favicon.png"><%# size(32x32) %>
+<link rel="apple-touch-icon" href="<%- IMAGES_PATH %>common/apple-touch-icon.png"><%# size(180x180) %>
+
+<meta property="og:url" content="<% if(page.ogpUrl) { %><%- page.ogpUrl %><% } else { %><%- site.ogpUrl %><% } %>">
+<meta property="og:title" content="<% if(page.ogpTitle) { %><%- page.ogpTitle %><% } else { %><%- site.ogpTitle %><% } %>">
+<meta property="og:description" content="<% if(page.ogpDescription) { %><%- page.ogpDescription %><% } else { %><%- site.ogpDescription %><% } %>">
+<meta property="og:image" content="<% if(page.ogpImage) { %><%- page.ogpImage %><% } else { %><%- site.ogpImage %><% } %>"><%# size(1200x630推奨) %>
+<meta property="og:site_name" content="<% if(page.ogpSiteName) { %><%- page.ogpSiteName %><% } else { %><%- site.ogpSiteName %><% } %>">
+<meta property="og:type" content="<% if(page.ogpType) { %><%- page.ogpType %><% } else { %><%- site.ogpType %><% } %>">
+<meta property="og:locale" content="<% if(page.ogpLocale) { %><%- page.ogpLocale %><% } else { %><%- site.ogpLocale %><% } %>">
+<meta property="fb:app_id" content="<% if(page.ogpAppID) { %><%- page.ogpAppID %><% } else { %><%- site.ogpAppID %><% } %>"><%# 設定するとFacebook Insightsが利用できる（Analyticsみたいなもの） %>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<% if(page.ogpTitle) { %><%- page.ogpTitle %><% } else { %><%- site.ogpTitle %><% } %>">
+<meta name="twitter:description" content="<% if(page.ogpDescription) { %><%- page.ogpDescription %><% } else { %><%- site.ogpDescription %><% } %>">
+<meta name="twitter:image" content="<% if(page.ogpImage) { %><%- page.ogpImage %><% } else { %><%- site.ogpImage %><% } %>">
+
+<link rel="stylesheet" href="<%- CSS_PATH %>app.css">
+<%_ if (Array.isArray(page.styles)) { _%>
+  <%_ page.styles.forEach(function(style) { _%>
+<link rel="stylesheet" href="<%- CSS_PATH %><%- style %>.css">
+  <%_ }) _%>
+<%_ } _%>
+</head>
+<%_
+var bodyClass = [];
+if (page.id) { bodyClass.push('page-' + page.id); }
+if (Array.isArray(page.bodyClass)) { bodyClass = bodyClass.concat(page.bodyClass); }
+bodyClass = bodyClass.join(' ');
+_%>
+<body class="<%- bodyClass %>">
+<div class="l-wrap">
+
+<%- include('./_header') %>
+
+<%- include('./_menu') %>
+
+<div class="l-main">

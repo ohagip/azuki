@@ -1,0 +1,27 @@
+<%- include('../../_config') _%>
+<%
+// ページ個別設定
+page = {};
+page.id = 'about';
+
+page.title = '';
+page.description = '';
+page.keywords = '';
+
+page.ogpUrl = '';
+page.ogpTitle = '';
+page.ogpDescription = '';
+page.ogpImage = '';
+page.ogpSiteName = '';
+page.ogpType = '';
+page.ogpLocale = '';
+page.ogpAppID = '';
+
+page.bodyClass = [];
+page.styles = [];
+page.scripts = [];
+page.imagesPath =  IMAGES_PATH + page.id + '/';
+_%>
+<%- include('../../parts/_head'); %>
+<img src="<%= page.imagesPath %>" alt="">
+<%- include('../../parts/_foot'); %>

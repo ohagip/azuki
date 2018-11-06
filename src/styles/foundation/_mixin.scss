@@ -1,0 +1,152 @@
+/**
+ * Mixin
+ */
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin hideaway {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+// English
+@mixin lang-en {
+  .en & {
+    @content;
+  }
+}
+
+// Chinese
+@mixin lang-cn {
+  .cn & {
+    @content;
+  }
+}
+
+
+// SMART PHONE
+@mixin mq-xsp {
+  @media screen and (max-width: #{$MQ_BREAKPOINT_XSP_MAX}) {
+    @content;
+  }
+}
+@mixin mq-sp {
+  @media screen and (max-width: #{$MQ_BREAKPOINT_SP_MAX}) {
+    @content;
+  }
+}
+
+// TABLET
+@mixin mq-tab {
+  @media screen and (min-width: #{$MQ_BREAKPOINT_TAB_MIN}) and (max-width: #{$MQ_BREAKPOINT_TAB_MAX}) {
+    @content;
+  }
+}
+@mixin mq-tab-gt {
+  @media screen and (min-width: #{$MQ_BREAKPOINT_TAB_MIN}) {
+    @content;
+  }
+}
+@mixin mq-tab-lt {
+  @media screen and (max-width: #{$MQ_BREAKPOINT_TAB_MAX}) {
+    @content;
+  }
+}
+
+// PC
+@mixin mq-pc {
+  @media screen and (min-width: #{$MQ_BREAKPOINT_PC_MIN}) {
+    @content;
+  }
+}
+
+// landscape
+@mixin mq-landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+// Windows
+@mixin hack-win {
+  .windows & {
+    @content;
+  }
+}
+
+// Mac os
+@mixin hack-mac {
+  .mac & {
+    @content;
+  }
+}
+
+// iOS
+@mixin hack-ios {
+  .ios & {
+    @content;
+  }
+}
+
+// Android
+@mixin hack-android {
+  .android & {
+    @content;
+  }
+}
+
+// ie
+@mixin hack-ie {
+  .ie & {
+    @content;
+  }
+}
+
+// ie9
+@mixin hack-ie9 {
+  .ie9 & {
+    @content;
+  }
+}
+
+// ie10
+@mixin hack-ie10 {
+  .ie10 & {
+    @content;
+  }
+}
+
+// ie11
+@mixin hack-ie11 {
+  .ie11 & {
+    @content;
+  }
+}
+
+// Edge
+@mixin hack-edge {
+  .edge & {
+    @content;
+  }
+}
+
+// Windows Chrome
+@mixin hack-win-chrome {
+  .windows.chrome & {
+    @content;
+  }
+}
+
+// Windows Firefox
+@mixin hack-win-ff {
+  .windows.firefox & {
+    @content;
+  }
+}

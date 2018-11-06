@@ -1,0 +1,13 @@
+/**
+ * Footer
+ */
+
+.p-footer {
+  $name: #{&};
+
+  &_copy {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+}

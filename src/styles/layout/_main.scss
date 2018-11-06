@@ -1,0 +1,10 @@
+/**
+ * Layout Main
+ */
+
+.l-main {
+  z-index: 1;
+  position: relative;
+
+  @include mq-tab-gt { padding-top: 60px; }
+}

@@ -1,0 +1,11 @@
+/**
+ * Layout Wrap
+ */
+
+.l-wrap {
+  position: relative;
+
+  @include mq-tab-gt {
+    min-width: (960px + $CONTAINER_PADDING-PC * 2);
+  }
+}

@@ -1,0 +1,31 @@
+/*
+--- 
+name: Container
+category:
+  - component
+  - component/container
+fullWidth: true
+--- 
+
+```html
+<div class="c-container" style="background-color: #ccc;">
+  <p>Container</p>
+</div>
+```
+*/
+.c-container {
+  $name: #{&};
+
+  @include mq-tab-gt {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $CONTAINER_PADDING-PC;
+    padding-right: $CONTAINER_PADDING-PC;
+    width: $CONTAINER_WIDTH-PC;
+  }
+  
+  @include mq-sp {
+    width: 100%;
+  }
+}

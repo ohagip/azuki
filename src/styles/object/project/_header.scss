@@ -1,0 +1,19 @@
+/**
+ * Header
+ */
+
+.p-header {
+  position: relative;
+  width: 100%;
+  background-color: #FFF;
+
+  @include mq-tab-gt { height: 50px; }
+  @include mq-sp { height: 40px; }
+}
+
+.p-header_menuBtn {
+  position: absolute;
+
+  @include mq-tab-gt { left: 12px; top: 12px; }
+  @include mq-sp { left:  7px; top:  7px; }
+}

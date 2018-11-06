@@ -1,0 +1,30 @@
+{
+  "extends": "airbnb",
+  "env" : {
+    "browser": true
+  },
+  "globals": {
+    "jQuery": true,
+    "$": true,
+    "_": true,
+    "ScrollMagic": true,
+    "TweenMax": true,
+    "Power0": true,
+    "Power1": true,
+    "Power2": true,
+    "Power3": true,
+    "Power4": true,
+    "APP_CONFIG": true,
+    "APP_ENV": true,
+    "YT": true,
+    "LineIt": true,
+    "IScroll": true,
+  },
+  "rules": {
+    "eol-last": 0, // ファイルの最後には空行を入れる off
+    "no-new": 0,// 変数代入を行わないインスタンス生成をしない off
+    "no-mixed-operators": 0,// 計算で加減と乗除の混在を許可しない off
+    "no-underscore-dangle": 0,// 変数・関数名の先頭に_を許可しない off
+    "import/no-extraneous-dependencies": ["error", { "peerDependencies": true }] // airbnbの設定でdevDependenciesのimportがerrorになるのでoverride
+  }
+}

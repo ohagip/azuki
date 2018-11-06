@@ -1,0 +1,32 @@
+/**
+ * Base
+ */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: $FONT_COLOR;
+  font-size: $FONT_SIZE;
+  font-family: $FONT_FAMILY;
+  background: $BASE_COLOR;
+  line-height: $LINE_HEIGHT;
+}
+
+a {
+  color: $LINK_COLOR;
+  line-height: $LINE_HEIGHT;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+img { vertical-align: bottom; }

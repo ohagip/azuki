@@ -1,0 +1,123 @@
+<%- include('../_config') _%>
+<%
+// ページ個別設定
+page = {};
+page.id = 'top';
+
+page.title = '';
+page.description = '';
+page.keywords = '';
+
+page.ogpUrl = '';
+page.ogpTitle = '';
+page.ogpDescription = '';
+page.ogpImage = '';
+page.ogpSiteName = '';
+page.ogpType = '';
+page.ogpLocale = '';
+page.ogpAppID = '';
+
+page.bodyClass = [];
+page.styles = [];
+page.scripts = [(JS_PATH + page.id + '.js')];
+page.imagesPath =  IMAGES_PATH + page.id + '/';
+_%>
+<%- include('../parts/_head'); %>
+
+  <div class="c-container">
+    <div class="hero">
+      <div class="hero_cover"></div>
+      <div class="hero_viewport">
+        <div class="hero_item"><img src="<%= page.imagesPath %>img_hero-1.png" alt=""></div>
+        <div class="hero_item"><img src="<%= page.imagesPath %>img_hero-2.png" alt=""></div>
+        <div class="hero_item"><img src="<%= page.imagesPath %>img_hero-3.png" alt=""></div>
+        <div class="hero_item"><img src="<%= page.imagesPath %>img_hero-4.png" alt=""></div>
+      </div>
+      <div class="hero_pager"><%# <div class="hero_icon"><div class="hero_bar"></div></div> %></div>
+    </div>
+  </div>
+
+  <div class="c-container u-mt-l">
+    <div class="c-grid c-grid-gutter">
+      <div class="c-grid_item c-grid_item-4">
+        <div class="c-card">
+          <div class="c-card_image">
+            <img src="<%= page.imagesPath %>img_card-2.png" alt="">
+          </div>
+          <div class="c-card_content">
+            <h3 class="c-card_title">TITLE 1</h3>
+            <p class="c-card_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+          </div>
+          <div class="c-card_link">
+            <a href="#">link 1-1</a>
+            <a href="#">link 1-2</a>
+          </div>
+        </div>
+      </div>
+      <div class="c-grid_item c-grid_item-4">
+        <div class="c-card">
+          <div class="c-card_image">
+            <img src="<%= page.imagesPath %>img_card-2.png" alt="">
+          </div>
+          <div class="c-card_content">
+            <h3 class="c-card_title">TITLE 2</h3>
+            <p class="c-card_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+          </div>
+          <div class="c-card_link">
+            <a href="#">link 2-1</a>
+            <a href="#">link 2-2</a>
+          </div>
+        </div>
+      </div>
+      <div class="c-grid_item c-grid_item-4">
+        <div class="c-card">
+          <div class="c-card_image">
+            <img src="<%= page.imagesPath %>img_card-2.png" alt="">
+          </div>
+          <div class="c-card_content">
+            <h3 class="c-card_title">TITLE 3</h3>
+            <p class="c-card_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          </div>
+          <div class="c-card_link">
+            <a href="#">link 3-1</a>
+            <a href="#">link 3-2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-container u-mt-l">
+    <div class="c-grid">
+      <div class="c-grid_item c-grid_item-6">
+        <div class="c-media">
+          <div class="c-media_image">
+            <img src="<%= page.imagesPath %>img_card-1.png" alt="">
+          </div>
+          <div class="c-media_body">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,</p>
+          </div>
+        </div>
+      </div>
+      <div class="c-grid_item c-grid_item-6">
+        <div class="c-media">
+          <div class="c-media_image">
+            <img src="<%= page.imagesPath %>img_card-1.png" alt="">
+          </div>
+          <div class="c-media_body">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-container u-mt-l">
+    <div class="youtube">
+      <div class="youtube_inner">
+        <div id="youtube"></div>
+      </div>
+    </div>
+  </div>
+
+<%- include('../parts/_foot'); %>
