@@ -220,6 +220,17 @@ const settings = {
     eslint: {
       useEslintrc: true,
     },
+    prettierEslint: {
+      eslintConfig: {},
+      prettierOptions: {
+        parser: 'babylon',
+      },
+      fallbackPrettierOptions: {
+        singleQuote: true,
+        trailingComma: 'es5',
+        arrowParens: 'always',
+      }
+    },
     styleguide: {},
     jsdoc: {
       tags: {

@@ -53,7 +53,7 @@ $(() => {
       { time: 4, enter: () => {}, exit: () => {} },
     ],
     'hero',
-    1,
+    1
   );
 
   $('.hero_item > img').imagesLoaded(() => {

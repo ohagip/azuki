@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import prettierEslint from '@tiaanduplessis/gulp-prettier-eslint';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import named from 'vinyl-named';
@@ -15,7 +16,7 @@ function runPrettier(callback) {
     const s = gulp
       .src(config.paths.script.prettierSrc)
       .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
-      .pipe($.prettierEslint())
+      .pipe(prettierEslint(config.settings.prettierEslint))
       .pipe(gulp.dest(config.paths.script.dir));
     return s;
   }

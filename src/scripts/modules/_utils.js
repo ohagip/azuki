@@ -230,7 +230,9 @@ export function destroyUnit(_target, _options) {
     $target = $target.find(options.selector);
   }
 
-  $target.removeClass('is-unit is-unit-first is-unit-last is-unit-top is-unit-bottom is-unit-left is-unit-right');
+  $target.removeClass(
+    'is-unit is-unit-first is-unit-last is-unit-top is-unit-bottom is-unit-left is-unit-right'
+  );
 }
 
 /**
@@ -276,7 +278,10 @@ export function CognitiveRandom(_distance) {
 
   function r(min, max) {
     let val = Math.random();
-    while (Math.abs(lastValue - val) < distance && Math.abs(lastValue2 - val) < distance) {
+    while (
+      Math.abs(lastValue - val) < distance &&
+      Math.abs(lastValue2 - val) < distance
+    ) {
       val = Math.random();
     }
     lastValue2 = lastValue;
@@ -296,7 +301,7 @@ export function separate3Digits(v) {
   let r = String(v).replace(/,/g, '');
   let rPrev = r;
   let flg = false;
-  for (; flg === false;) {
+  for (; flg === false; ) {
     r = r.replace(/^(-?\d+)(\d{3})/, '$1,$2');
     if (rPrev === r) {
       flg = true;

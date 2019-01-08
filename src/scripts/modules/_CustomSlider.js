@@ -82,7 +82,11 @@ class CustomSlider {
         this.$slides.eq(this.currentIndex).hide();
         this.$slides.eq(nextIndex).show();
         if ($.isFunction(this.info[this.currentIndex].exit) === true) {
-          this.info[this.currentIndex].exit.call(this, this, this.$slides[this.currentIndex]);
+          this.info[this.currentIndex].exit.call(
+            this,
+            this,
+            this.$slides[this.currentIndex]
+          );
         }
         const $dfd = $.Deferred();
         setTimeout(() => {
@@ -97,7 +101,10 @@ class CustomSlider {
           if ($.isFunction(this.info[nextIndex].enter) === true) {
             this.info[nextIndex].enter.call(this, this.$slides[nextIndex]);
           }
-          this.setPager(this.currentIndex, this.info[this.currentIndex].time || defaultSlideTime);
+          this.setPager(
+            this.currentIndex,
+            this.info[this.currentIndex].time || defaultSlideTime
+          );
         }
       });
   }
@@ -108,9 +115,15 @@ class CustomSlider {
     }
     this.isFirst = false;
     this.init();
-    this.setPager(this.currentIndex, this.info[this.currentIndex].time || defaultSlideTime);
+    this.setPager(
+      this.currentIndex,
+      this.info[this.currentIndex].time || defaultSlideTime
+    );
     if ($.isFunction(this.info[this.currentIndex].enter) === true) {
-      this.info[this.currentIndex].enter.call(this, this.$slides[this.currentIndex]);
+      this.info[this.currentIndex].enter.call(
+        this,
+        this.$slides[this.currentIndex]
+      );
     }
   }
 
@@ -126,9 +139,15 @@ class CustomSlider {
       this.tween.play();
     } else {
       if ($.isFunction(this.info[this.currentIndex].enter) === true) {
-        this.info[this.currentIndex].enter.call(this, this.$slides[this.currentIndex]);
+        this.info[this.currentIndex].enter.call(
+          this,
+          this.$slides[this.currentIndex]
+        );
       }
-      this.setPager(this.currentIndex, this.info[this.currentIndex].time || defaultSlideTime);
+      this.setPager(
+        this.currentIndex,
+        this.info[this.currentIndex].time || defaultSlideTime
+      );
     }
   }
 

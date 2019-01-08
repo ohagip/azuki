@@ -237,7 +237,11 @@ export function isAndroid() {
 export function getIOSVersion() {
   if (/ip(hone|od|ad)/.test(ua) === true) {
     const v = ua.match(/os (\d+)_(\d+)_?(\d+)?/) || [];
-    const versions = [parseInt(v[1] || 0, 10), parseInt(v[2] || 0, 10), parseInt(v[3] || 0, 10)];
+    const versions = [
+      parseInt(v[1] || 0, 10),
+      parseInt(v[2] || 0, 10),
+      parseInt(v[3] || 0, 10),
+    ];
     return versions;
   }
   return [0, 0, 0];
@@ -250,7 +254,11 @@ export function getIOSVersion() {
 export function getAndroidVersion() {
   if (/android/.test(ua) === true) {
     const v = ua.match(/android (\d+).(\d+).?(\d+)?/) || [];
-    const versions = [parseInt(v[1] || 0, 10), parseInt(v[2] || 0, 10), parseInt(v[3] || 0, 10)];
+    const versions = [
+      parseInt(v[1] || 0, 10),
+      parseInt(v[2] || 0, 10),
+      parseInt(v[3] || 0, 10),
+    ];
     return versions;
   }
   return [0, 0, 0];

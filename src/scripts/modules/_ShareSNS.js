@@ -18,7 +18,8 @@ class ShareSNS {
   constructor(options) {
     this.options = options || {};
     this.options.twitter = this.options.twitter || '.js-shareSNS-twitter';
-    this.options.twitterF = this.options.twitterF || '.js-shareSNS-twitterFollow';
+    this.options.twitterF =
+      this.options.twitterF || '.js-shareSNS-twitterFollow';
     this.options.facebook = this.options.facebook || '.js-shareSNS-facebook';
     this.options.google = this.options.google || '.js-shareSNS-google';
     this.options.hatena = this.options.hatena || '.js-shareSNS-hatena';
@@ -185,7 +186,11 @@ class ShareSNS {
     const h = height || 400;
     const l = window.screen.width / 2 - w / 2;
     const t = window.screen.height / 2 - h / 2;
-    window.open(url, 'sharewindow', `scrollbars=yes, width=${w}, height=${h}, left=${l}, top=${t}`);
+    window.open(
+      url,
+      'sharewindow',
+      `scrollbars=yes, width=${w}, height=${h}, left=${l}, top=${t}`
+    );
   }
 }
 

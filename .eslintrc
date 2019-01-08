@@ -3,6 +3,9 @@
   "env" : {
     "browser": true
   },
+  "react": {
+    "version": "detect"
+  },
   "globals": {
     "jQuery": true,
     "$": true,

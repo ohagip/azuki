@@ -28,7 +28,7 @@ export function ajax(_options) {
         console.log('timeout error.');
       }
       defer.reject(xhr, textStatus, errorThrown);
-    },
+    }
   );
 
   return defer.promise();
