@@ -111,7 +111,7 @@ function createData(auth) {
 }
 
 // Load client secrets from a local file.
-fs.readFile(`${__dirname}/client_secret.json`, (err, content) => {
+fs.readFile(`${__dirname}/client_id.json`, (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call the Google Sheets API.
   authorize(JSON.parse(content), createData);

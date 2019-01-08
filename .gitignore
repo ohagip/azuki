@@ -7,6 +7,6 @@ npm-debug.log
 dist
 public
 doc
-tools/client_secret.json
+tools/client_id.json
 tools/credentials.json
 tools/sample.json

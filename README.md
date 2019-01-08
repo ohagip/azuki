@@ -98,16 +98,14 @@ SVGのスプライト画像を作成する場合
 ### data script
 以下の手順で事前にGoogle Sheets APIを利用可能にしてください。（初回のみ）
 
-1. [Google Developers Console](https://console.developers.google.com/flows/enableapi?apiid=sheets.googleapis.com&hl=ja)へアクセスしプロジェクトの選択もしくは作成し 「続行」→「認証情報に進む」とクリックします。  
-   （作成する場合は任意のプロジェクト名でOKです）
-2. 「プロジェクトに資格情報を追加」ページで、「キャンセル」をクリックします。
-3. 「認証情報を作成」プルダウンで「OAuth クライアント ID」を選択し、次の画面で「同意画面を設定」をクリックします。
-4. 「メールアドレス」を自身のGoogleアカウント、「ユーザーに表示するサービス名」を任意（**ページ作成用など）に入力し「保存」をクリックします。
-5. 「アプリケーションの種類」は「その他」を選択し、「名前」は任意（**ページ作成用など）に入力し「作成」をクリックします。
-6. 認証情報ページで5で入力した名前の右にあるダウンロードをクリックしJSONファイルをダウンロードします。
-7. ダウンロードしたJSONファイルを`./src/data/client_secret.json`へ保存します。
-8. コマンド`npm run data`を実行します。
-9. CLIに「Authorize this app by visiting this url:: ...」と表示されるのでアクセスし、アカウントを選択後、「許可」をクリックします。  
+1. [Google Developers Console](https://console.developers.google.com/flows/enableapi?apiid=sheets.googleapis.com&hl=ja)へアクセスしプロジェクトを作成を選択し 「続行」とクリックします。  
+2. 「プロジェクトへの認証情報の追加」ページで、使用するAPI（Google Sheets API）、APIを呼び出す場所（その他のUI CLIツールなど）、アクセスするデータの種類（ユーザーデータ）を選択し、「必要な認証情報」をクリックします。
+3. 「OAuth2.0クライアントIDを作成する」で、任意の名前を入力し、「OAuthクライアントIDを作成」をクリックします。
+4. 「OAuth 2.0 同意画面を設定する」で、「メールアドレス」を自身のGoogleアカウント、「ユーザーに表示するサービス名」を任意（**ページ作成用など）に入力し「次へ」をクリックします。
+5. 「認証情報をダウンロードする」で、ダウンロードをクリックしJSONファイルをダウンロードし、「完了」をクリックします。。
+6. ダウンロードしたJSONファイルを`./src/data/client_id.json`へ保存します。
+7. コマンド`npm run data`を実行します。
+8. CLIに「Authorize this app by visiting this url:: ...」と表示されるのでアクセスし、アカウントを選択後、「許可」をクリックします。  
    表示されるコードをCLIへ入力してください。入力後`./src/data/credentials.json`ファイルが作成されます。
 
 [Node.js Quickstart | Sheets API](https://developers.google.com/sheets/api/quickstart/nodejs?hl=ja)
