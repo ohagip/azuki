@@ -8,19 +8,19 @@ const $ = gulpLoadPlugins();
 const browser = browserSync.create();
 const serverSetting = _.merge({}, config.settings.server, config.settings.jsdoc.server);
 
-gulp.task('jsdoc', (callback) => {
+export function jsDoc(callback) {
   gulp
     .src(config.paths.jsdoc.src, { read: false })
     .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
     .pipe($.jsdoc3(config.settings.jsdoc, callback));
-});
+}
 
-gulp.task('jsdocServer', (callback) => {
+export function jsDocServer(callback) {
   browser.init(serverSetting);
   callback();
-});
+}
 
-gulp.task('jsdocServer:reload', (callback) => {
+export function reloadJsDocServer(callback) {
   browser.reload();
   callback();
-});
+}

@@ -5,7 +5,7 @@ import config from '../config';
 const $ = gulpLoadPlugins();
 const runTimestamp = Math.round(Date.now() / 1000);
 
-gulp.task('iconFont', () => {
+export default function iconFont() {
   const s = gulp
     .src(config.paths.iconFont.src)
     .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
@@ -22,4 +22,4 @@ gulp.task('iconFont', () => {
     })
     .pipe(gulp.dest(config.paths.iconFont.dist));
   return s;
-});
+}

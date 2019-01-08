@@ -6,7 +6,7 @@ import config from '../config';
 const sahrePageList = require(`${config.paths.view.dir}_share_page_list`);
 const $ = gulpLoadPlugins();
 
-gulp.task('sharePage', (callback) => {
+export default function sharePage(callback) {
   function create() {
     return new Promise((resolve) => {
       let i = 0;
@@ -23,16 +23,17 @@ gulp.task('sharePage', (callback) => {
           gulp
             .src(template)
             .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
-            .pipe($.data(() => {
-              const d = {
+            .pipe($.ejs(
+              {
                 // page: page毎設定, CONSTANTS
                 page: sahrePageList[idx],
                 constants: config.constants,
                 env: config.env,
-              };
-              return d;
-            }))
-            .pipe($.ejs(config.settings.ejs.options, config.settings.ejs.settings))
+              },
+              config.settings.ejs.options,
+              config.settings.ejs.settings
+
+            ))
             .pipe($.rename({ basename: sahrePageList[idx].id }))
             .pipe(gulp.dest(dist))
             .on('end', () => {
@@ -51,4 +52,4 @@ gulp.task('sharePage', (callback) => {
   Promise.all(tasks).then(() => {
     callback();
   });
-});
+}

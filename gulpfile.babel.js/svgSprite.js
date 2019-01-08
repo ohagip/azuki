@@ -4,7 +4,7 @@ import config from '../config';
 
 const $ = gulpLoadPlugins();
 
-gulp.task('svgSprite', (callback) => {
+export default function svgSprite(callback) {
   if (config.settings.svgSprite.isUse === true) {
     return gulp
       .src(config.paths.svgSprite.src)
@@ -13,4 +13,4 @@ gulp.task('svgSprite', (callback) => {
       .pipe(gulp.dest(config.paths.svgSprite.dist));
   }
   return callback();
-});
+}

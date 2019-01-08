@@ -4,7 +4,7 @@ import config from '../config';
 
 const $ = gulpLoadPlugins();
 
-gulp.task('images', () => {
+export default function images() {
   const s = gulp
     .src(config.paths.image.src)
     .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
@@ -12,4 +12,4 @@ gulp.task('images', () => {
     .pipe($.if(config.settings.image.minify, $.imagemin()))
     .pipe(gulp.dest(config.paths.image.dist));
   return s;
-});
+}

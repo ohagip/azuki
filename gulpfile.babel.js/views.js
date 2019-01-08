@@ -5,7 +5,7 @@ import config from '../config';
 
 const $ = gulpLoadPlugins();
 
-gulp.task('views', () => {
+export default function views() {
   const s = gulp
     .src(config.paths.view.src)
     .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
@@ -29,4 +29,4 @@ gulp.task('views', () => {
     .pipe($.if(config.settings.view.minify, $.htmlmin(config.settings.minifier)))
     .pipe(gulp.dest(config.paths.view.dist));
   return s;
-});
+}
