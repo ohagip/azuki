@@ -17,8 +17,9 @@ import { styleGuide } from './styleGuide';
 import { jsDoc } from './jsDoc';
 import { lintViews, lintStyles, lintScripts } from './lint';
 import sharePage from './sharePage';
-// import svgSprite from './svgSprite';
-// import iconFont from './iconfont';
+import svgSprite from './svgSprite';
+import iconFont from './iconfont';
+
 
 const $ = gulpLoadPlugins();
 const argv = minimist(process.argv.slice(2));
@@ -50,14 +51,6 @@ function watchDefault(callback) {
     config.paths.script.watch,
     gulp.series(scripts, reloadServer),
   );
-  // gulp.watch(
-  //   config.paths.svgSprite.watch,
-  //   gulp.series(svgSprite, reloadServer),
-  // );
-  // gulp.watch(
-  //   config.paths.iconFont.watch,
-  //   gulp.series(iconFont, reloadServer),
-  // );
 
   imagesWatcher.on('unlink', (filePath) => {
     const filePathFromSrc = path.relative(config.paths.image.dir, filePath);
@@ -114,8 +107,6 @@ exports.default = gulp.series.apply(this, defaultTasks);
 
 exports.build = gulp.series(
   clean,
-  // TODO gulp-svg-spritesheet index.js:284 でfs.writeFileでcallbackがないためエラー代替えを探す（あまり使ってないからそのうち）
-  // svgSprite,
   gulp.parallel(
     copy,
     views,
@@ -123,7 +114,6 @@ exports.build = gulp.series(
     scriptLibs,
     styles,
     images,
-    // iconFont, // アイコンフォント作成
     // sharePage, // shareページ生成
   ),
 );
@@ -132,7 +122,6 @@ if (isWatchDoc === true) {
   documentTasks.push(server);
 }
 documentTasks.push(cleanDoc);
-// documentTasks.push(svgSprite);
 documentTasks.push(gulp.parallel(styles, scripts));
 documentTasks.push(gulp.parallel(styleGuide, jsDoc));
 documentTasks.push(replaceDocument);
@@ -143,6 +132,8 @@ exports.document = gulp.series.apply(this, documentTasks);
 
 exports.sharePage = sharePage;
 exports.lint = gulp.series(lintViews, lintStyles, lintScripts);
+exports.iconFont = iconFont;
+exports.svgSprite = svgSprite;
 
 
 // exports.deploy = (callback) => {

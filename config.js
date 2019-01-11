@@ -66,15 +66,11 @@ const paths = {
   },
   iconFont: {
     src: `${SRC}iconFont/*.svg`,
-    dir: `${SRC}iconFont/`,
-    watch: `${SRC}iconFont/*.svg`,
-    dist: `${DEST}assets/font/`,
+    dist: `${SRC}static/assets/font/`,
   },
   svgSprite: {
     src: `${SRC}svgSprite/*.svg`,
-    dir: `${SRC}svgSprite/`,
-    watch: `${SRC}svgSprite/**/*`,
-    dist: `${DEST}assets/images/common/svgSprite.svg`,
+    dist: `${SRC}`,
   },
   static: {
     // font, htaccessなど
@@ -145,16 +141,28 @@ const settings = {
       minify: false,
     },
     svgSprite: {
-      isUse: false,
-      // isUse: true, // 利用する場合 src/styles/app.scss > `@import 'object/component/_svgSprite';`の追加が必要
+      replaceSprite: '$IMG_PATH + "common/sprite.svg"', // scss template内のパス調整
       options: {
-        cssPathSvg: 'common/svgSprite.svg', // SCSSテンプレートの中で利用する値
-        padding: 0, // ガター（スプライト同士の余白）
-        pixelBase: 100, // 個別の SVG アイコン作成時に統一した高さ。
-        positioning: 'packed', // スプライトの配置設定
-        templateSrc: `${paths.svgSprite.dir}_template.scss`, // 用意したSCSSテンプレート
-        templateDest: `${paths.style.dir}object/component/_svgSprite.scss`, // テンプレートから生成されるSCSSファイル
-        units: 'em',
+        shape: {
+          dimension: {
+            precision: 2,
+          },
+          spacing: {
+            padding: 0,
+          },
+        },
+        mode: {
+          css: {
+            dest: '.',
+            sprite: 'images/common/sprite.svg', // ファイル名
+            bust: false, // キャッシュ対策のためファイル名にハッシュが入る
+            render: {
+              scss: {
+                dest: './styles/object/component/_sprite.scss',
+              }
+            }
+          },
+        },
       },
     },
     minifier: {

@@ -63,7 +63,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-svg-spritesheet": "0.0.4",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-watch": "^5.0.0",
     "http-proxy-middleware": "^0.19.1",
     "imagesloaded": "^4.1.4",
@@ -91,6 +91,8 @@
     "doc-prod": "gulp document --env=prod",
     "doc-watch": "gulp document --watch=true",
     "lint": "gulp lint",
+    "iconFont": "gulp iconFont",
+    "svgSprite": "gulp svgSprite",
     "sharePage": "gulp sharePage",
     "data": "node ./tools/createData.js"
   },

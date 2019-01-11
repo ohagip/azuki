@@ -21,6 +21,8 @@ npm start
 - `doc-prod` ドキュメント（本番用にディレクトリを変えるだけ）
 - `doc-watch` ドキュメント（ローカルサーバがたつ）
 - `lint` ソースチェック（※Style Guide用のコメントブロックがエラーになります><）
+- `iconFont` フォント作成
+- `svgSprite` SVGスプライト作成
 - `sharePage` シェア用ダミーページ作成
 - `data` ページ作成用のjsonデータをGoogleスプレッドシートから作成
 
@@ -81,14 +83,11 @@ APIや画像のダミーは`/src/mock/`以下を利用します。
 `.htaccess`など静的ファイルは`/src/static/`以下へ保存します。  
 `/src/static/`以下はディレクトリごと`/dist/`へコピーされます。
 
+## iconFont
+SVGファイルを`/src/iconFont/`へ格納しコマンドを実行すると、Staticフォルダにフォントファイルが出力されます。
+
 ## SVG sprite image
-SVGのスプライト画像を作成する場合
-
-- `config.js`の`settings.svgSprite.isUse`を`true`にします。
-- `/src/styles/app.scss`で`object/component/_svgSprite`を`import`します。
-- SVGファイルは`/src/svgSprite/`以下に格納します。
-
-ファイルの格納場所や出力先は`config.js`で設定できます。
+SVGファイルは`/src/svgSprite/`へ格納しコマンドを実行すると、srcフォルダにsvgとscssファイルが出力されます。
 
 ## Share page
 シェアに利用するリダイレクトするだけのページを作成します。
