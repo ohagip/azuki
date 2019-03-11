@@ -50,9 +50,9 @@ if (config.settings.script.Uglify === true) {
       compress: {
         warnings: false,
       },
-      mangle: {
-        keep_fnames: true,
-      },
+      // mangle: {
+      //   keep_fnames: true,
+      // },
     },
   }));
 }
