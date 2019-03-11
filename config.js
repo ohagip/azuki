@@ -231,13 +231,10 @@ const settings = {
     prettierEslint: {
       eslintConfig: {},
       prettierOptions: {
-        parser: 'babylon',
+        parser: 'babel',
       },
-      fallbackPrettierOptions: {
-        singleQuote: true,
-        trailingComma: 'es5',
-        arrowParens: 'always',
-      }
+      // .eslintrcが読み込めないときの設定
+      fallbackPrettierOptions: {}
     },
     styleguide: {},
     jsdoc: {

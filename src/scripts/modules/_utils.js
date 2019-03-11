@@ -120,7 +120,7 @@ export function containMediaMaxSize($wrap, $target) {
 
 /**
  * クエリストリング（URLパラメータ）をパースして返す
- * @returns {Object} `{name: value, ...}`にパースする
+ * @return {Object} `{name: value, ...}`にパースする
  */
 export function getQueryString() {
   const result = {};

@@ -1,10 +1,12 @@
 {
-  "extends": "airbnb",
-  "env" : {
-    "browser": true
+  "extends": ["eslint:recommended", "google"],
+  "plugins": [],
+  "parserOptions": {
+    "sourceType": "module"
   },
-  "react": {
-    "version": "detect"
+  "env" : {
+    "browser": true,
+    "es6": true
   },
   "globals": {
     "jQuery": true,
@@ -21,13 +23,17 @@
     "APP_ENV": true,
     "YT": true,
     "LineIt": true,
-    "IScroll": true,
+    "IScroll": true
   },
   "rules": {
+    "no-console": 0, // consoleを許可しない off
+    "object-curly-spacing": [2, "always"] ,// `{}`の前後にスペースを許可
+    "indent": ["error", 2, { "MemberExpression": 1, "SwitchCase": 1 }], // メソッドチェーンとswitch文のcaseインデント
     "eol-last": 0, // ファイルの最後には空行を入れる off
-    "no-new": 0,// 変数代入を行わないインスタンス生成をしない off
-    "no-mixed-operators": 0,// 計算で加減と乗除の混在を許可しない off
-    "no-underscore-dangle": 0,// 変数・関数名の先頭に_を許可しない off
-    "import/no-extraneous-dependencies": ["error", { "peerDependencies": true }] // airbnbの設定でdevDependenciesのimportがerrorになるのでoverride
+    "no-new": 0, // 変数代入を行わないインスタンス生成をしない off
+    "no-mixed-operators": 0, // 計算で加減と乗除の混在を許可しない off
+    "no-underscore-dangle": 0, // 変数・関数名の先頭に_を許可しない off
+    "require-jsdoc": 0 // js-docが必要 off
+//    "valid-jsdoc": [2, { "prefer": { "return": "returns" } }] // js-docの@returnを@returnsで統一
   }
 }

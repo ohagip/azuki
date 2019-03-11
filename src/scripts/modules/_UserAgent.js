@@ -6,7 +6,7 @@ const ua = navigator.userAgent.toLowerCase();
 
 /**
  * IE判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIe() {
   return ua.indexOf('msie') !== -1 || ua.indexOf('trident') !== -1;
@@ -14,7 +14,7 @@ export function isIe() {
 
 /**
  * IE6判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIe6() {
   return ua.indexOf('msie 6.') !== -1;
@@ -22,7 +22,7 @@ export function isIe6() {
 
 /**
  * IE7判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIe7() {
   return ua.indexOf('msie 7.') !== -1;
@@ -30,7 +30,7 @@ export function isIe7() {
 
 /**
  * IE8判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIe8() {
   return ua.indexOf('msie 8.') !== -1;
@@ -38,7 +38,7 @@ export function isIe8() {
 
 /**
  * IE9判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIe9() {
   return ua.indexOf('msie 9.') !== -1;
@@ -46,7 +46,7 @@ export function isIe9() {
 
 /**
  * IE10判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIe10() {
   return ua.indexOf('msie 10.') !== -1;
@@ -54,7 +54,7 @@ export function isIe10() {
 
 /**
  * IE11判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIe11() {
   return ua.indexOf('trident/7') !== -1;
@@ -62,7 +62,7 @@ export function isIe11() {
 
 /**
  * IE6,7,8,9,10判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isOldIe() {
   return isIe10() || isIe9() || isIe8() || isIe7() || isIe6();
@@ -70,7 +70,7 @@ export function isOldIe() {
 
 /**
  * Edge判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isEdge() {
   return ua.indexOf('edge') !== -1;
@@ -78,7 +78,7 @@ export function isEdge() {
 
 /**
  * Chrome判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isChrome() {
   return ua.indexOf('chrome') !== -1 && ua.indexOf('edge') === -1;
@@ -86,7 +86,7 @@ export function isChrome() {
 
 /**
  * Safari判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isSafari() {
   return ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1;
@@ -94,7 +94,7 @@ export function isSafari() {
 
 /**
  * Firefox判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isFirefox() {
   return ua.indexOf('firefox') !== -1;
@@ -102,7 +102,7 @@ export function isFirefox() {
 
 /**
  * Opera判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isOpera() {
   return ua.indexOf('opera') !== -1;
@@ -110,7 +110,7 @@ export function isOpera() {
 
 /**
  * iPhone判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIphone() {
   return ua.indexOf('iphone') !== -1 || ua.indexOf('ipod') !== -1;
@@ -118,7 +118,7 @@ export function isIphone() {
 
 /**
  * Android SP判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isAndroidSp() {
   return ua.indexOf('android') !== -1 && ua.indexOf('mobile') !== -1;
@@ -126,7 +126,7 @@ export function isAndroidSp() {
 
 /**
  * SP判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isSp() {
   return isAndroidSp() || isIphone();
@@ -134,7 +134,7 @@ export function isSp() {
 
 /**
  * iPad判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIpad() {
   return ua.indexOf('ipad') !== -1;
@@ -142,7 +142,7 @@ export function isIpad() {
 
 /**
  * Android Tablet判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isAndroidTab() {
   return ua.indexOf('android') !== -1 && !isAndroidSp();
@@ -150,7 +150,7 @@ export function isAndroidTab() {
 
 /**
  * Tablet判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isTablet() {
   return isIpad() || isAndroidTab();
@@ -158,7 +158,7 @@ export function isTablet() {
 
 /**
  * SP, tablet判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isMobile() {
   return isSp() || isTablet();
@@ -166,7 +166,7 @@ export function isMobile() {
 
 /**
  * Windows判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isWindows() {
   return ua.indexOf('windows') !== -1 && ua.indexOf('phone') === -1;
@@ -174,7 +174,7 @@ export function isWindows() {
 
 /**
  * Windows判定のバージョンを返す
- * @returns {String} 取得できない場合は空文字
+ * @return {String} 取得できない場合は空文字
  */
 export function getWindowsVersion() {
   if (/windows/.test(ua) === true) {
@@ -208,7 +208,7 @@ export function getWindowsVersion() {
 
 /**
  * Mac判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isMac() {
   return ua.indexOf('mac') !== -1 && ua.indexOf('os') !== -1;
@@ -216,7 +216,7 @@ export function isMac() {
 
 /**
  * iOS判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isIos() {
   return isIphone() || isIpad();
@@ -224,7 +224,7 @@ export function isIos() {
 
 /**
  * Android判定
- * @returns {boolean}
+ * @return {boolean}
  */
 export function isAndroid() {
   return ua.indexOf('android') !== -1;
@@ -232,7 +232,7 @@ export function isAndroid() {
 
 /**
  * iOSのバージョンを返す
- * @returns {Array} [major, Minor, build]（取得出来ない場合は`0`とする）
+ * @return {Array} [major, Minor, build]（取得出来ない場合は`0`とする）
  */
 export function getIOSVersion() {
   if (/ip(hone|od|ad)/.test(ua) === true) {
@@ -249,7 +249,7 @@ export function getIOSVersion() {
 
 /**
  * Androidのバージョンを返す
- * @returns {Array} [major, Minor, build]（取得出来ない場合は`0`とする）
+ * @return {Array} [major, Minor, build]（取得出来ない場合は`0`とする）
  */
 export function getAndroidVersion() {
   if (/android/.test(ua) === true) {

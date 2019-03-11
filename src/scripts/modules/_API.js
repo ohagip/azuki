@@ -8,7 +8,7 @@ import config from '../_config';
  * @param {Object} options
  * @param {string} options.url リクエスト先のURL
  * @param {Object} options.data サーバに送信するデータ`{key: value, ...}`
- * @returns {jQuery.jqXHR.promise}
+ * @return {jQuery.jqXHR.promise}
  * @private
  */
 export function ajax(_options) {
@@ -42,7 +42,7 @@ export function ajax(_options) {
 /**
  * データを取得
  * @param {Object} options
- * @returns {jQuery.jqXHR.promise}
+ * @return {jQuery.jqXHR.promise}
  */
 export function fetchSample(options) {
   return ajax(_.defaults(options, { url: `${config.apiUrl}getSample/` }));
@@ -51,7 +51,7 @@ export function fetchSample(options) {
 /**
  * データを登録
  * @param {Object} options
- * @returns {jQuery.jqXHR.promise}
+ * @return {jQuery.jqXHR.promise}
  */
 export function putSample(options) {
   return ajax(_.defaults(options, { url: `${config.apiUrl}createSample/` }));
@@ -60,7 +60,7 @@ export function putSample(options) {
 /**
  * データを変更
  * @param {Object} options
- * @returns {jQuery.jqXHR.promise}
+ * @return {jQuery.jqXHR.promise}
  */
 export function updateSample(options) {
   return ajax(_.defaults(options, { url: `${config.apiUrl}updateSample/` }));
@@ -69,7 +69,7 @@ export function updateSample(options) {
 /**
  * データを削除
  * @param {Object} options
- * @returns {jQuery.jqXHR.promise}
+ * @return {jQuery.jqXHR.promise}
  */
 export function deleteSample(options) {
   return ajax(_.defaults(options, { url: `${config.apiUrl}deleteSample/` }));
