@@ -12,6 +12,7 @@ const webpackConfig = {
     rules: [
       { test: /\.js$/, exclude: /node_modules|libs/, use: 'babel-loader' },
       { test: /\.json$/, use: 'json-loader' },
+      { test: /\.(glsl|vs|fs|vert|frag)$/, exclude: /node_modules/, use: ['raw-loader', 'glslify-loader'] },
     ],
   },
   optimization: {
@@ -19,12 +20,12 @@ const webpackConfig = {
       cacheGroups: {
         commons: {
           test: /node_modules|src\/scripts\/modules|src\/scripts\/components|_config.js/,
-          name: "common",
-          chunks: "all",
+          name: 'common',
+          chunks: 'all',
           enforce: true,
         },
       },
-    }
+    },
   },
   plugins: [
     // new webpack.ProvidePlugin({
