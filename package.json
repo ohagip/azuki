@@ -34,6 +34,7 @@
     "expose-loader": "^0.7.5",
     "express": "^4.16.3",
     "express-delay": "^0.2.0",
+    "glslify-import-loader": "^0.1.2",
     "glslify-loader": "^2.0.0",
     "googleapis": "^36.0.0",
     "graceful-fs": "^4.1.11",

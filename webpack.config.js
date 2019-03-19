@@ -12,7 +12,7 @@ const webpackConfig = {
     rules: [
       { test: /\.js$/, exclude: /node_modules|libs/, use: 'babel-loader' },
       { test: /\.json$/, use: 'json-loader' },
-      { test: /\.(glsl|vs|fs|vert|frag)$/, exclude: /node_modules/, use: ['raw-loader', 'glslify-loader'] },
+      { test: /\.(glsl|vs|fs|vert|frag)$/, exclude: /node_modules/, use: ['glslify-import-loader', 'raw-loader', 'glslify-loader'] },
     ],
   },
   optimization: {

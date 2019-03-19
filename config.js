@@ -37,7 +37,7 @@ const paths = {
     src: `${SRC}scripts/**/!(_)*.js`,
     prettierSrc: [`${SRC}scripts/**/*.js`, `!${SRC}scripts/libs/**/*.js`],
     dir: `${SRC}scripts/`,
-    watch: `${SRC}scripts/**/*.js`,
+    watch: `${SRC}scripts/**/*.(js|glsl|vs|fs|vert|frag)`,
     dist: `${DEST}assets/js/`,
     // headタグで読み込みscripts（※更新時は再度ビルドが必要）
     libsHead: [],
