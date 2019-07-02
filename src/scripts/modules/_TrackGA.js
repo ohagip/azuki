@@ -1,6 +1,6 @@
 /**
- * analytics.js を使用してイベント トラッキングを送信する
- * （gaタグは読み込み済みとする）
+ * analytics.js or gtag.js を使用してイベント トラッキングを送信する
+ * （ga or gtagは読み込み済みとする）
  * @param {jQuery} $selector
  * @param {Object} feeds 指定したフィードを固定
  * @param {string} feeds.category
@@ -26,7 +26,15 @@ class TrackGA {
       f.category = this.feeds.category || $target.attr('data-category');
       f.action = this.feeds.action || $target.attr('data-action');
       f.label = this.feeds.label || $target.attr('data-label');
-      f.value = this.feeds.value || parseInt($target.attr('data-value'), 10);
+
+      if (this.feeds.value !== undefined) {
+        f.value = this.feeds.value;
+      } else {
+        const value = $target.attr('data-value');
+        if (value !== undefined) {
+          f.value = parseInt(value, 10);
+        }
+      }
 
       TrackGA.send(f);
     });
@@ -40,7 +48,8 @@ class TrackGA {
   }
 
   /**
-   * トラッキングを送信する
+   * トラッキングを送信する（analytics.js ）
+   * https://developers.google.com/analytics/devguides/collection/analyticsjs/events?hl=ja
    * @param {Object} feeds フィード
    * @param {string} feeds.category
    * @param {string} feeds.action
@@ -67,6 +76,36 @@ class TrackGA {
 
     ga('send', 'event', d);
   }
+
+  /**
+   * トラッキングを送信する（gtag.js）
+   * https://developers.google.com/analytics/devguides/collection/gtagjs/events?hl=ja
+   * @param {string} action
+   * @param {Object} feeds フィード
+   * @param {string} feeds.category
+   * @param {string} feeds.label
+   * @param {number} feeds.value
+   * @static
+   */
+  // static send(action, feeds) {
+  //   const f = feeds || {};
+  //   const d = {};
+  //
+  //   if (action !== undefined) {
+  //     return;
+  //   }
+  //   if (f.category !== undefined) {
+  //     d.event_category = f.category;
+  //   }
+  //   if (f.label !== undefined) {
+  //     d.event_label = f.label;
+  //   }
+  //   if (f.value !== undefined) {
+  //     d.value = f.value;
+  //   }
+  //
+  //   gtag('event', action, d);
+  // }
 }
 
 export default TrackGA;

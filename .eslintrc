@@ -23,7 +23,9 @@
     "APP_ENV": true,
     "YT": true,
     "LineIt": true,
-    "IScroll": true
+    "IScroll": true,
+    "ga": true,
+    "gtag": true
   },
   "rules": {
     "no-console": 0, // consoleを許可しない off
